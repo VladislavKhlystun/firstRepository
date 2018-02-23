@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+   	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   	<link type="text/css" rel="stylesheet" href="star/demo.css">
+   	<link rel="stylesheet" href="css/style.css">
+	<title>product</title>
+
+</head>
+<body>
+	<div class="container-fluid welcome">
+		<div class="container">
+			<div class="row">
+				<div class="welcome__welcomeMessage col-lg-5 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-7 col-sm-offset-2 col-xs-10 col-xs-offset-1"> Start selling your products or buy them from anywhere!
+				</div> 
+				<div class="welcome__cross pull-right">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="header">
+				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 header__currency currency">
+					<div id="flag" class="currency__flag"></div>
+					<select class="form-control currency__select" name="selectLang" id="lang" >
+						<option value="usd">USD</option>
+						<option value="uah">UAH</option>
+						<option value="rub">RUB</option>
+					</select>
+				</div>
+			<div class="header__logo col-lg-2 col-lg-offset-3 col-md-2 col-md-offset-2 col-sm-3">
+				<img src="sources/logo.png" alt="bonfire">
+			</div>
+			
+			<a class="header__btn col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-3">
+				<span> Cart ()</span>
+			</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="line"></div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="navigation">
+				<div class="navigation__bars col-lg-1">
+					<i class="fas fa-bars"></i>
+				</div>
+				
+				<div class="navigation__list col-lg-7 col-lg-offset-2 col-md-8 col-md-offset-1 ">
+					<ul class="nav nav-pills unsignedList">
+						<li class="unsignedList__listItem">	<a href="#" class="listLink">Home</a></li>
+						<li class="dropdown unsignedList__listItem">
+					          <a href="#" class="listLink dropdown-toggle" data-toggle="dropdown">
+					          Men
+					            <span class="caret"></span>
+					          </a>
+					          <ul class="dropdown-menu">
+					            <li class="unsignedList__listItem"><a href="#"> подпункт</a></li>
+					            <li class="unsignedList__listItem"><a href="#"> подпункт</a></li>
+					            <li class="unsignedList__listItem"><a href="#">подпункт</a></li>
+					          </ul>
+					        </li>
+						<li class="dropdown unsignedList__listItem">
+					          <a href="#" class="listLink dropdown-toggle"  data-toggle="dropdown">
+					          Women
+					            <span class="caret"></span>
+					          </a>
+					          <ul class="dropdown-menu">
+					            <li class="unsignedList__listItem"><a href="#"> подпункт</a></li>
+					            <li class="unsignedList__listItem"><a href="#"> подпункт</a></li>
+					            <li class="unsignedList__listItem"><a href="#">подпункт</a></li>
+					          </ul>
+					        </li>
+						<li class="unsignedList__listItem"><a href="#"  class="listLink">Lookbook </a></li>
+						<li class="unsignedList__listItem"><a href="#"  class="listLink">About</a></li>
+						<li class="unsignedList__listItem"><a href="#"  class="listLink">Blog</a></li>
+					</ul>
+				</div>
+
+				<div class="navigation__likeSearch icons col-lg-2 col-md-2">
+					<i class="icons__like far fa-heart"></i>
+					<i class="icons__search fas fa-search"></i>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="line"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<!-- <div class="images col-lg-6">
+				<div class="images__main">
+					
+				</div>
+				<div class="images__mini ">
+					<div class="minImg col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+					<div class="minImg col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+					<div class="minImg col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+					<div class="minImg col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+				</div>
+			</div> -->
+
+				<div class="images col-lg-6" >
+				<div class="images__main" >
+					<img src="sources/img1.jpg" alt="" id="preview">
+				</div>
+				
+				<div class="images__mini" id="slider">
+					<div class="arrows" id="move-left" ><i class="fas fa-chevron-left"></i></div>
+					<div class="arrows" id="move-right"><i class="fas fa-chevron-right"></i></div>
+						<div class="thumbs" id="slider-row">
+							<div class="thubms__item" > <img src="sources/img1.jpg" onclick="preview(this)" alt="" ></div>
+							<div class="thubms__item"><img src="sources/img2.jpg" onclick="preview(this)" alt=""> </div>
+							<div class="thubms__item"> <img src="sources/img3.jpg" onclick="preview(this)" alt=""></div>
+							<div class="thubms__item"><img src="sources/img4.jpg" onclick="preview(this)" alt=""> </div>
+							<div class="thubms__item"> <img src="sources/img5.jpg" onclick="preview(this)" alt=""></div>
+							<div class="thubms__item"> <img src="sources/img6.jpg" onclick="preview(this)" alt=""></div>
+							<div class="thubms__item"> <img src="sources/img7.jpg" onclick="preview(this)" alt=""></div>			
+				</div>
+			</div>
+		</div>
+
+			<div class="itemInfo col-lg-6">
+				<div class="itemInfo__back">
+					<i class="fas fa-angle-left"></i>
+					<span>Back to <a href="#"> Woman</a></span>
+				</div>
+
+				<div class="itemInfo__title">
+					<h2>The Atelier Tailed Coat</h2>
+				</div>
+				
+				<div class="itemInfo__rating rating">
+					<div id="ID" class="rating__star">
+						</div>
+					<div class="rating__review">
+						3 Review(s)
+					</div>
+					<a href="#" class="rating__addReview">
+						Add a review
+					</a>
+				</div>
+
+				<div class="itemInfo__price">
+					<span>$499.99</span>
+				</div>
+
+				<div class="itemInfo__shortInfo">
+					<ul class="descriptionList">
+						<li class="descriptionList__listItem"><span > Availability:</span> <span class="descriptionList__listItem-color"> In stock</span> </li>
+						<li class="descriptionList__listItem"><span > Product code:</span> <span class="descriptionList__listItem-color"> #4657</span> </li>
+						<li class="descriptionList__listItem"><span> Tags:</span> <span class="descriptionList__listItem-color"> Fashion, Hood, Classsic</span> </li>
+					</ul>
+				</div>
+
+				<div class="itemInfo__description description">
+					<div class="description__paragraph">
+						Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-ton Lazio suit features a notch lapel, flap pockets, and accompanying flat front trousers—all in pure wool by Vitale Barberis Canonico.
+					</div>
+
+					<div class="description__list">
+						<ul>
+							<li>Dark blue suit for a tone-on-tone look</li>
+							<li>Regular fit</li>
+							<li>100% cotton</li>
+							<li>Free shipping with 4 days delivery</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="itemInfo__details row">
+			
+						<div class="col-lg-5 details">
+							<h5 class="details__title">Color</h5>
+							<select class="details__select" name="" id="">
+								<option value="">Select color</option>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+								<option value="">S</option>
+							</select>
+						</div>
+
+						<div class="col-lg-5 details">
+							<h5 class="details__title">Size</h5>
+							<select class="details__select" name="" id="">
+								<option value=""> Select size</option>
+								<option value=""> 1</option>
+								<option value=""> 2</option>
+								<option value=""> 3</option>
+								<option value=""> 4</option>
+								<option value=""> 5</option>
+							</select>
+						</div>
+
+						<div class="col-lg-2 details">
+							<h5 class="details__title"> QTY</h5>
+							<select class="details__select" name="" id=""></select>
+						</div>
+						
+						<a href="#" class="itemInfo__clear">Clear selection</a>
+					</div>
+				
+
+				<div class="itemInfo__btn row">
+					<a href="#" class=" btn__cartWishlist ">
+						<span>Add to cart</span>
+					</a>
+					<a href="#" class=" btn__cartWishlist">
+						<i class=" far fa-heart"></i>
+						<span>Add to wishlist</span>
+					</a>
+				</div>
+
+				<div class="itemInfo__social">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="line"></div>
+						</div>
+					</div>
+				<div class="row">
+					<div class="shareSocial col-lg-12 col-md-12 col-sm-12">
+						<div class="shareSocial__title">Share this</div>
+						<div class="shareSocial__fb ">
+							<button class="fbButton">
+								<i class="fab fa-facebook"></i>
+								<span>Like</span>
+							</button>
+							<button class="fbButton">
+								<span>Share</span>
+							</button>
+
+							<div class="badgeSocial">
+								<div class="badgeSocial__inner">
+									<span class="sign">235k</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="shareSocial__twitter">
+							<button class="twitterButton"> 
+								<i class="fab fa-twitter"></i>
+								<span>Tweet</span>
+							</button>
+
+							<div class="badgeSocialTwitter">
+									<div class="badgeSocialTwitter__inner">
+										<span class="sign">93</span>
+									</div>
+								</div>
+						</div>
+						<div class="shareSocial__pinIt">
+							<button class="pinItButton">
+								<img src="sources/pin-it.png" alt="">
+							</button>
+							<div class="badgeSocialPinIt">
+								<div class="badgeSocialPinIt__inner">
+									<span class="pinItSign">65k+</span>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="line"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="line"></div>
+			</div>
+		</div>
+
+		<div class="footerInfo">
+			<div class="footerInfo__title">
+				<span>Made with Love & Coffee © 2015 Design Lazy. All Rights Reserved.</span>
+			</div>
+		</div>
+	</footer>
+
+	</div>
+</div>
+	
+	<script>
+		$(document).ready(function(){
+    		$('.rating__star').raty();
+	});
+	</script>
+
+	<script>
+		$('#lang').change(function(){
+
+			let a = $('.currency__select').val();
+
+			if (a === 'usd') {
+				$('#flag').removeClass();
+				$('#flag').addClass('currency__flag')
+			}
+
+			if (a === 'uah') {
+				$('#flag').removeClass();
+				$('#flag').addClass('currency__flag-ua')
+			}
+			if (a === 'rub') {
+				$('#flag').removeClass();
+				$('#flag').addClass('currency__flag-ru')
+			}
+		});	
+
+		$('.welcome__cross').click(function() {
+			$('.welcome').fadeOut(300);
+		});
+	</script>
+
+	<script>
+		
+	</script>
+
+
+<script>
+	var sliderPrev = document.getElementById("move-left");
+	var sliderNext = document.getElementById("move-right");
+	
+		sliderPrev.onclick = sliderLeft;
+		
+		sliderNext.onclick = sliderRight;
+
+	var left = 0;
+		
+
+		function sliderRight() {
+		    var polosa = document.getElementById("slider-row");
+		left = left - 380;
+		    if(left < -760) {
+		            left = 0;
+		    }
+		polosa.style.left = left + "px";
+	
+		}
+
+		function sliderLeft(){
+		    var polosa = document.getElementById("slider-row");
+		if (left === 0) {
+			exit;
+		}
+
+		left = left + 380;
+		    if(left > 1140) {
+		            left = 0;
+		    }
+		polosa.style.left = left + "px";
+		}
+
+		function preview (obj) {
+			var pictureUrl = obj.src;
+			document.getElementById("preview").src = pictureUrl;
+		}
+</script>
+
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="star/jquery.raty.js"></script>
+	<script src="star/raty.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+</body>
+</html>
